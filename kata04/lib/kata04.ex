@@ -1,18 +1,18 @@
 defmodule Kata04 do
-  @moduledoc """
-  Documentation for `Kata04`.
-  """
 
-  @doc """
-  Hello world.
+def convert_to_matrix(file_path) do
 
-  ## Examples
+  contents = File.read!(file_path)
 
-      iex> Kata04.hello()
-      :world
+  rows= String.split(contents,"\n")
 
-  """
-  def hello do
-    :world
-  end
+  columns= rows |> Enum.map(fn row ->
+    String.split(row,",")
+  end)
+
+
+end
+
+
+
 end
